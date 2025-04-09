@@ -50,7 +50,6 @@ lib/generated_plugin_registrant.dart
 #pubspec.lock
 
 # Android related
-android
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
 **/android/captures/
@@ -61,7 +60,6 @@ android
 **/android/**/GeneratedPluginRegistrant.java
 
 # iOS/XCode related
-ios
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3
 **/ios/**/*.moved-aside

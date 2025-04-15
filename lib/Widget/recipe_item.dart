@@ -5,16 +5,15 @@ import 'heart_icon.dart';
 
 class RecipeItem extends StatelessWidget {
   final Map<String, dynamic> recipe;
-  final double imageWidth = Util.getWidgetSize(1 / 7);
+  final double imageWidth = Util.getWidgetSize(0.19);
 
   RecipeItem({super.key, required this.recipe});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 8.w),
+      padding: EdgeInsets.symmetric(vertical: 9.h, horizontal: 9.w),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8.w),
@@ -27,10 +26,10 @@ class RecipeItem extends StatelessWidget {
               ),
             ),
           ),
-
           SizedBox(width: 8.w),
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
@@ -44,7 +43,7 @@ class RecipeItem extends StatelessWidget {
                           recipe['name'],
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 10.sp,
+                            fontSize: 12.sp,
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),

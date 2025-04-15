@@ -1,4 +1,6 @@
+import 'package:capstone/Screen/home_screen.dart';
 import 'package:capstone/Screen/mypage_screen.dart';
+import 'package:capstone/Screen/recipe_upload_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -20,8 +22,8 @@ class _MainScreenState extends State<MainScreen> {
     _selectedIndex = widget.pageIndex;
 
     pages = <Widget>[
-      MyPageScreen(),
-      MyPageScreen(),
+      HomeScreen(),
+      RecipeUploadScreen(),
       MyPageScreen(),
     ];
   }

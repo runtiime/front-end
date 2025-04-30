@@ -59,7 +59,7 @@ class RecipeUploadScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 60.h),
+          SizedBox(height: 150.h),
           Center(
             child: ImageUploadButton(
               containerWidth: 100.w,

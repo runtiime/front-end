@@ -35,6 +35,26 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       'description': 'Simple and delicious pizza.',
       'image': 'assets/pizza.png',
     },
+    {
+      'name': 'Blueberry Pancakes',
+      'description': 'Perfect breakfast treat.',
+      'image': 'assets/pancakes.png',
+    },
+    {
+      'name': 'Margherita Pizza',
+      'description': 'Simple and delicious pizza.',
+      'image': 'assets/pizza.png',
+    },
+    {
+      'name': 'Blueberry Pancakes',
+      'description': 'Perfect breakfast treat.',
+      'image': 'assets/pancakes.png',
+    },
+    {
+      'name': 'Margherita Pizza',
+      'description': 'Simple and delicious pizza.',
+      'image': 'assets/pizza.png',
+    },
   ];
 
   @override

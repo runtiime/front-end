@@ -11,6 +11,7 @@ void main() {
 class MyApp extends StatelessWidget {
   final String userId;
   const MyApp({super.key, required this.userId});
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(

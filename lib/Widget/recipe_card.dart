@@ -37,7 +37,7 @@ class RecipeCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 8.h),
+              padding: EdgeInsets.only(top: 6.h, bottom: 6.h),
               child: Text(
                 recipe['name'],
                 style: TextStyle(
@@ -56,23 +56,23 @@ class RecipeCard extends StatelessWidget {
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Color(0xFFE6B277),
-                side: BorderSide(color: Color(0xFFE6B277)),
-                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-                shape: RoundedRectangleBorder(
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 8.w), // 적절한 padding 설정
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Color(0xFFE6B277)),
                   borderRadius: BorderRadius.circular(8.r),
                 ),
-                elevation: 0,
-              ),
-              child: Text(
-                'View Recipe',
-                style: TextStyle(
-                  fontSize: 8.sp,
-                  fontWeight: FontWeight.w500,
+                child: Text(
+                  'View Recipe',
+                  style: TextStyle(
+                    fontSize: 8.sp,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFFE6B277),
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),

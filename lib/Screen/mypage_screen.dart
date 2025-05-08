@@ -55,23 +55,26 @@ class _MyPageScreenState extends State<MyPageScreen> with SingleTickerProviderSt
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 25.0.h),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Center(
-                  child: Text(
-                    'My Page',
-                    style: TextStyle(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.bold,
+            child: Padding(
+              padding: EdgeInsets.only(top:15.0.h),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Center(
+                    child: Text(
+                      'My Page',
+                      style: TextStyle(
+                        fontSize: 25.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: MenuSortIcon(onPressed: () {}),
-                ),
-              ],
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: MenuSortIcon(onPressed: () {}),
+                  ),
+                ],
+              ),
             ),
           ),
           Padding(

@@ -25,7 +25,7 @@ class _HeartIconState extends State<HeartIcon> {
       icon: Icon(
         isFavorite ? Icons.favorite : Icons.favorite_border,
         color: isFavorite ? Color(0xFFE6B277) : Colors.grey,
-        size: 13.sp,
+        size: 20.sp,
       ),
       onPressed: () {
         setState(() {

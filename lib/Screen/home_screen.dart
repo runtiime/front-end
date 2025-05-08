@@ -1,8 +1,9 @@
+import 'dart:io';
+import 'package:capstone/Screen/recipe_detail_screen.dart';
 import 'package:capstone/Widget/image_upload_button.dart';
 import 'package:flutter/material.dart';
 import '../Widget/recipe_card.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../Widget/search_textfield.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -71,26 +72,29 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 25.0.h),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Center(
-                  child: Text(
-                    'Home',
-                    style: TextStyle(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.bold,
+            child: Padding(
+              padding: EdgeInsets.only(top:15.0.h),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Center(
+                    child: Text(
+                      'Home',
+                      style: TextStyle(
+                        fontSize: 27.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 15.0.w),
-                    child: Icon(Icons.settings),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 15.0.w),
+                      child: Icon(Icons.settings),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Padding(
@@ -100,10 +104,18 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 Expanded(child: SearchTextField()),
                 SizedBox(width: 10.w),
                 ImageUploadButton(
-                  onTap: () {},
                   containerWidth: 35.w,
                   imageWidth: 30.sp,
                   hasBorder: false,
+                  onImageSelected: (File file) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RecipeDetailScreen(recipeId: 1),
+                      ),
+                    );
+                  },
+
                 ),
               ],
             ),

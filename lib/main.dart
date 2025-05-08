@@ -1,16 +1,13 @@
-import 'package:capstone/Screen/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:capstone/Screen/login_screen.dart'; // 로그인 화면 import
 
 void main() {
-  runApp(const MyApp(
-    userId: 'userID',
-  ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final String userId;
-  const MyApp({super.key, required this.userId});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +19,9 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Capstone',
-          home: child,
+          home: const LoginScreen(), // 시작은 로그인 화면
         );
       },
-      child: Scaffold(
-        body: MainScreen(pageIndex: 0, userId: userId),
-      ),
     );
   }
 }

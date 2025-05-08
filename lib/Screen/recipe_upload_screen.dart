@@ -1,10 +1,12 @@
+import 'dart:io';
+import 'package:capstone/Screen/recipe_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Widget/image_upload_button.dart';
 import '../util.dart';
 
 class RecipeUploadScreen extends StatelessWidget {
-  final double containerWidth = Util.getWidgetSize(1);
+  final double containerWidth = Util.getWidgetSize(1/3);
 
   RecipeUploadScreen({super.key});
 
@@ -16,19 +18,22 @@ class RecipeUploadScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 25.0.h),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Center(
-                  child: Text(
-                    'Recipe Upload',
-                    style: TextStyle(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.bold,
+            child: Padding(
+              padding: EdgeInsets.only(top:20.0.h),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Center(
+                    child: Text(
+                      'Recipe Upload',
+                      style: TextStyle(
+                        fontSize: 25.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Column(
@@ -62,10 +67,15 @@ class RecipeUploadScreen extends StatelessWidget {
           SizedBox(height: 150.h),
           Center(
             child: ImageUploadButton(
-              containerWidth: 100.w,
+              containerWidth: containerWidth,
               imageWidth: 40.w,
-              onTap: () {
-                // Handle image upload action here
+              onImageSelected: (File file) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => RecipeDetailScreen(recipeId: 1),
+                  ),
+                );
               },
             ),
           ),

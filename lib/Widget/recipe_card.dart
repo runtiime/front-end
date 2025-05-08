@@ -1,3 +1,4 @@
+import 'package:capstone/Screen/recipe_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../util.dart';
@@ -14,11 +15,12 @@ class RecipeCard extends StatelessWidget {
       color: Colors.white,
       elevation: 0,
       margin: EdgeInsets.symmetric(vertical: 10.h),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.r),
-      side: BorderSide(
-        color:Color(0xffF0F0F0),
-        width: 1,
-      )),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.r),
+          side: BorderSide(
+            color: Color(0xffF0F0F0),
+            width: 1,
+          )),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10.0.w),
         child: Column(
@@ -47,7 +49,7 @@ class RecipeCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom:8.0.h),
+              padding: EdgeInsets.only(bottom: 8.0.h),
               child: Text(
                 recipe['description'],
                 style: TextStyle(
@@ -57,9 +59,15 @@ class RecipeCard extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => RecipeDetailScreen(recipeId: 1)),
+                );
+              },
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 8.w), // 적절한 padding 설정
+                padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 8.w),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(color: Color(0xFFE6B277)),
